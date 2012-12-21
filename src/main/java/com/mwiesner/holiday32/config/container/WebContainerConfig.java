@@ -33,7 +33,7 @@ public class WebContainerConfig implements WebApplicationInitializer {
 		AnnotationConfigWebApplicationContext root = new AnnotationConfigWebApplicationContext();
 		root.setServletContext(sc);
 		root.register(SpringCoreConfiguration.class);
-		root.getEnvironment().addActiveProfile("production");
+		root.getEnvironment().addActiveProfile("test");
 		// We don't startup the Application Context right now, instead we register a ServletContextListener.
 		// The Listener will startup the Application Context later and also register it in the ServletContext.
 		// This is needed that the DispatcherServlet can lookup that root context.

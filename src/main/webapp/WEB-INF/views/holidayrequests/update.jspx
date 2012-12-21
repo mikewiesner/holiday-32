@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_mwiesner_holiday32_domain_HolidayRequest" modelAttribute="holidayRequest" path="/holidayrequests" versionField="Version" z="7oGIOsF6iOCHkkQ669YSuhgj98U=">
+        <field:select field="requester" id="c_com_mwiesner_holiday32_domain_HolidayRequest_requester" itemValue="id" items="${employees}" path="/employees" required="true" z="jmXgOtqZJf3qa9lgv3/Pggo31eM="/>
+        <field:datetime dateTimePattern="${holidayRequest_fromdate_date_format}" field="fromDate" future="true" id="c_com_mwiesner_holiday32_domain_HolidayRequest_fromDate" required="true" z="dCgZMsX5eBAniUHy1Elhac50Dag="/>
+        <field:datetime dateTimePattern="${holidayRequest_todate_date_format}" field="toDate" future="true" id="c_com_mwiesner_holiday32_domain_HolidayRequest_toDate" required="true" z="hDO7PGe8N01LWR6CeS0+RLIcmcU="/>
+        <field:textarea field="comment" id="c_com_mwiesner_holiday32_domain_HolidayRequest_comment" z="LcQUA7VtW9ZQaas8H7p2yJLAURY="/>
+    </form:update>
+</div>

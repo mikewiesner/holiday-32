@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_mwiesner_holiday32_domain_HolidayRequest" items="${holidayrequests}" z="bwlJ/NACHy1DuNztBJFeCO6R6e4=">
+        <table:table data="${holidayrequests}" id="l_com_mwiesner_holiday32_domain_HolidayRequest" path="/holidayrequests" z="EHs/mAlp+CgAdqlwKk/6hjNu7Qo=">
+            <table:column id="c_com_mwiesner_holiday32_domain_HolidayRequest_requester" property="requester" z="yyJ3FveXiMrYtcTfRjWPRBnaBdA="/>
+            <table:column date="true" dateTimePattern="${holidayRequest_fromdate_date_format}" id="c_com_mwiesner_holiday32_domain_HolidayRequest_fromDate" property="fromDate" z="2i0LlAxwXnMat6wj6lIKBd66Q2I="/>
+            <table:column date="true" dateTimePattern="${holidayRequest_todate_date_format}" id="c_com_mwiesner_holiday32_domain_HolidayRequest_toDate" property="toDate" z="gkOlYw5cFRSJMXypkJtQQQVdtvg="/>
+            <table:column id="c_com_mwiesner_holiday32_domain_HolidayRequest_comment" property="comment" z="vZ/6PGzgWa6AcClQ53g7Ya6fLL0="/>
+        </table:table>
+    </page:list>
+</div>

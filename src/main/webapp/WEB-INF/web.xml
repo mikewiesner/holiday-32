@@ -2,22 +2,6 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-      version="3.0" metadata-complete="true"> 
-    
-    <display-name>holiday32</display-name>
-    
-   
-    <session-config>
-        <session-timeout>10</session-timeout>
-    </session-config>
-    
-    <error-page>
-        <exception-type>java.lang.Exception</exception-type>
-        <location>/uncaughtException</location>
-    </error-page>
-    
-    <error-page>
-        <error-code>404</error-code>
-        <location>/resourceNotFound</location>
-    </error-page>
+      version="3.0"> 
+
 </web-app>

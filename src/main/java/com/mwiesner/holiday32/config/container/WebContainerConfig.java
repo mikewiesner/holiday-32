@@ -1,4 +1,4 @@
-package com.mwiesner.holiday32.config.container;
+	package com.mwiesner.holiday32.config.container;
 
 
 import javax.servlet.ServletContext;
@@ -28,7 +28,7 @@ public class WebContainerConfig implements WebApplicationInitializer {
 	@Override
 	public void onStartup(ServletContext sc)
 			throws ServletException {
-		
+	
 		// Register root Application Context
 		AnnotationConfigWebApplicationContext root = new AnnotationConfigWebApplicationContext();
 		root.setServletContext(sc);

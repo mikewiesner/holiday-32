@@ -27,7 +27,7 @@ public class HolidayWebConverters {
 	public Converter<Employee, String> getEmployeeToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.mwiesner.holiday32.domain.Employee, java.lang.String>() {
             public String convert(Employee employee) {
-                return new StringBuilder().append(employee.getUsername()).append(' ').append(employee.getFirstName()).append(' ').append(employee.getLastName()).toString();
+                return new StringBuilder().append(employee.getFirstName()).append(' ').append(employee.getLastName()).toString();
             }
         };
     }

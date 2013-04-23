@@ -13,7 +13,7 @@ import org.springframework.core.env.Environment;
 @Configuration
 @PropertySource(value="classpath:META-INF/spring/database.properties")
 @Profile("production")
-public class ConfigInfraProduction {
+public class InfraProductionConfig {
 	
 	@Autowired
 	private Environment env;

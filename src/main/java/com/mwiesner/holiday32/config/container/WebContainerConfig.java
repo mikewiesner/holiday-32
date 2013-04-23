@@ -13,7 +13,7 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.DispatcherServlet;
 
-import com.mwiesner.holiday32.config.core.SpringCoreConfiguration;
+import com.mwiesner.holiday32.config.core.SpringCoreConfig;
 import com.mwiesner.holiday32.config.web.SimpleSpringWebMvcConfig;
 import com.mwiesner.holiday32.config.web.SpringWebMvcConfig;
 
@@ -33,7 +33,7 @@ public class WebContainerConfig implements WebApplicationInitializer {
 		// Register root Application Context
 		AnnotationConfigWebApplicationContext root = new AnnotationConfigWebApplicationContext();
 		root.setServletContext(sc);
-		root.register(SpringCoreConfiguration.class);
+		root.register(SpringCoreConfig.class);
 		root.getEnvironment().addActiveProfile(activeProfile);
 		// We don't startup the Application Context right now, instead we register a ServletContextListener.
 		// The Listener will startup the Application Context later and also register it in the ServletContext.

@@ -7,7 +7,7 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactoryBean;
 
 @Configuration
 @Profile("test")
-public class ConfigInfraTest {
+public class InfraTestConfig {
 
 	
 	@Bean

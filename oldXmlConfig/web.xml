@@ -11,7 +11,7 @@
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>com.mwiesner.holiday32.config.core.SpringCoreConfiguration</param-value>
+		<param-value>com.mwiesner.holiday32.config.core.SpringCoreConfig</param-value>
 	</context-param>
 
 	<context-param>

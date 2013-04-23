@@ -14,6 +14,7 @@ import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.DispatcherServlet;
 
 import com.mwiesner.holiday32.config.core.SpringCoreConfiguration;
+import com.mwiesner.holiday32.config.web.SimpleSpringWebMvcConfig;
 import com.mwiesner.holiday32.config.web.SpringWebMvcConfig;
 
 
@@ -41,7 +42,7 @@ public class WebContainerConfig implements WebApplicationInitializer {
 
 		// Register Dispatcher Servlet
 		AnnotationConfigWebApplicationContext dispatcherContext = new AnnotationConfigWebApplicationContext();
-		dispatcherContext.register(SpringWebMvcConfig.class);
+		dispatcherContext.register(SimpleSpringWebMvcConfig.class);
 		dispatcherContext.setServletContext(sc);
 		ServletRegistration.Dynamic servlet = sc.addServlet("holiday32", new DispatcherServlet(dispatcherContext));
 		servlet.setLoadOnStartup(1);

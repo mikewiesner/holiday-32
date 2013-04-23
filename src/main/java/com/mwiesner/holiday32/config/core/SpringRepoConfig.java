@@ -30,15 +30,10 @@ public class SpringRepoConfig {
 	
 	
 	@Bean
-	public JpaTransactionManager transactionManager() throws IOException {
-		return new JpaTransactionManager(entityManager());
+	public JpaTransactionManager transactionManager(EntityManagerFactory entityManager) throws IOException {
+		return new JpaTransactionManager(entityManager);
 	}
-	
 
-	@Bean
-	public EntityManagerFactory entityManager() throws IOException {
-		return entityManagerFactory().getObject();
-	}
 	
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() throws IOException {

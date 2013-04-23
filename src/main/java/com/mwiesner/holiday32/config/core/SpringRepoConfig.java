@@ -10,6 +10,7 @@ import javax.sql.DataSource;
 import org.hibernate.ejb.HibernatePersistence;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -18,6 +19,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
 @EnableJpaRepositories("com.mwiesner.holiday32.repo")
 @Import({InfraProductionConfig.class, InfraTestConfig.class})
+@Configuration
 public class SpringRepoConfig {
 	
 	@Autowired

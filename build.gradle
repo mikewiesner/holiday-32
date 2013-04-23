@@ -41,46 +41,47 @@ repositories {
 	mavenRepo url: "http://repo.maven.apache.org/maven2"
 }
 dependencies {
-	compile group: 'log4j', name: 'log4j', version:'1.2.17'
-	compile group: 'org.slf4j', name: 'slf4j-api', version:'1.7.2'
-	compile group: 'org.slf4j', name: 'jcl-over-slf4j', version:'1.7.2'
-	compile group: 'org.slf4j', name: 'slf4j-log4j12', version:'1.7.2'
-	compile group: 'org.aspectj', name: 'aspectjrt', version:'1.7.0'
-	compile group: 'org.apache.commons', name: 'commons-lang3', version:'3.1'
-	compile(group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE') { exclude(module: 'commons-logging') }
-	compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-	compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-	compile group: 'org.hsqldb', name: 'hsqldb', version:'2.2.9'
-	compile group: 'org.hibernate', name: 'hibernate-core', version:'4.1.8.Final'
-	compile(group: 'org.hibernate', name: 'hibernate-entitymanager', version:'4.1.8.Final') {
+	compile('log4j:log4j:1.2.17')
+	compile('org.slf4j:slf4j-api:1.7.2')
+	compile('org.slf4j:jcl-over-slf4j:1.7.2')
+	compile('org.slf4j:slf4j-log4j12:1.7.2')
+	compile('org.aspectj:aspectjrt:1.7.0')
+	compile('org.apache.commons:commons-lang3:3.1')
+	compile('org.springframework:spring-core:3.2.0.RELEASE') { exclude(module: 'commons-logging') }
+	compile('org.springframework:spring-context:3.2.0.RELEASE')
+	compile('org.springframework:spring-aop:3.2.0.RELEASE')
+	compile('org.hsqldb:hsqldb:2.2.9')
+	compile('org.hibernate:hibernate-core:4.1.8.Final')
+	compile('org.hibernate:hibernate-entitymanager:4.1.8.Final') {
 		exclude(module: 'cglib')
 		exclude(module: 'dom4j')
 	}
-	compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.0-api', version:'1.0.1.Final'
-	compile group: 'org.hibernate', name: 'hibernate-validator', version:'4.3.1.Final'
-	compile group: 'javax.validation', name: 'validation-api', version:'1.0.0.GA'
-	compile group: 'org.springframework', name: 'spring-orm', version:'3.2.0.RELEASE'
-	compile group: 'commons-pool', name: 'commons-pool', version:'1.5.6'
-	compile(group: 'commons-dbcp', name: 'commons-dbcp', version:'1.3') {
+	compile('org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final')
+	compile('org.hibernate:hibernate-validator:4.3.1.Final')
+	compile('javax.validation:validation-api:1.0.0.GA')
+	compile('org.springframework:spring-orm:3.2.0.RELEASE')
+	compile('commons-pool:commons-pool:1.5.6')
+	compile('commons-dbcp:commons-dbcp:1.3') {
 		exclude(module: 'commons-logging')
 		exclude(module: 'xml-apis')
 	}
-	compile group: 'org.springframework.data', name: 'spring-data-jpa', version:'1.2.0.RELEASE'
-	compile group: 'org.springframework', name: 'spring-webmvc', version:'3.2.0.RELEASE'
-	compile group: 'org.springframework.webflow', name: 'spring-js-resources', version:'2.2.1.RELEASE'
-	compile(group: 'javax.servlet.jsp.jstl', name: 'jstl-api', version:'1.2')  {
+	compile('org.springframework.data:spring-data-jpa:1.2.0.RELEASE')
+	compile('org.springframework:spring-webmvc:3.2.0.RELEASE')
+	compile('org.springframework.webflow:spring-js-resources:2.2.1.RELEASE')
+	compile('javax.servlet.jsp.jstl:jstl-api:1.2')  {
 		exclude(group: 'javax.servlet', module: 'servlet-api')
 	}
-	compile(group: 'org.glassfish.web', name: 'jstl-impl', version:'1.2') {
+	compile('org.glassfish.web:jstl-impl:1.2') {
 		exclude(group: 'javax.servlet', module: 'servlet-api')
 	}
-	compile group: 'joda-time', name: 'joda-time', version:'1.6'
-	compile group: 'org.apache.tiles', name: 'tiles-jsp', version:'2.2.2'
-	testCompile group: 'junit', name: 'junit', version:'4.10'
-	testCompile group: 'org.springframework', name: 'spring-test', version:'3.2.0.RELEASE'
+	compile('joda-time:joda-time:1.6')
+	compile('org.apache.tiles:tiles-jsp:2.2.2')
+	compile('org.apache.commons:commons-io:1.3.2')
+	testCompile('junit:junit:4.10')
+	testCompile('org.springframework:spring-test:3.2.0.RELEASE')
 	providedCompile('javax.servlet:javax.servlet-api:3.0.1')
-	providedCompile group: 'javax.el', name: 'el-api', version:'2.2'
-	providedCompile group: 'javax.servlet.jsp', name: 'jsp-api', version:'2.1'
+	providedCompile('javax.el:el-api:2.2')
+	providedCompile('javax.servlet.jsp:jsp-api:2.1')
 
 	def tomcatVersion = '7.0.32'
 	tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",

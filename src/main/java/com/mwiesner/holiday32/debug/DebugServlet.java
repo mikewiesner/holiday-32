@@ -11,6 +11,8 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 
+import org.apache.commons.io.FilenameUtils;
+
 
 @WebServlet(urlPatterns="/debug")
 public class DebugServlet implements Servlet{
@@ -37,6 +39,12 @@ public class DebugServlet implements Servlet{
 		}
 		else if (resource != null) {
 			req.getRequestDispatcher(path).forward(req, res);
+		}
+		else {
+			res.getOutputStream().print("File not found, returning content of parent folder:\r\n\r\n");
+			String parentFolder = FilenameUtils.getPath(path);
+			Set<String> resourcePaths = req.getServletContext().getResourcePaths("/"+parentFolder);
+			res.getOutputStream().print(resourcePaths.toString());
 		}
 		
 		
